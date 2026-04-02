@@ -7,6 +7,17 @@
 
 <style>
 
+.cert-table{
+width:100%;
+margin-top:15px;
+border-collapse:collapse;
+}
+
+.cert-table td{
+text-align:left;
+padding:6px;
+}
+
 body{
 font-family: Arial;
 background:#f2f2f2;
@@ -95,7 +106,7 @@ if(cert){
 
 document.getElementById("result").innerHTML = `
 <h3 style="color:blue;">Certificate Verified ✅</h3>
-<table>
+<table class="cert-table">
 <tr><td><b>Certificate ID:</b></td> <td>${cert.CertificateID}</p></td></tr>
 <tr><td><b>Name:</b></td><td> ${cert.Name}</td></tr>
 <tr><td><b>Gender:</b></td><td> ${cert.Gender}</td></tr>
