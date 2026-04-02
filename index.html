@@ -45,8 +45,6 @@ b{color:green;}
 
 <div class="title">TY Internation School</div>
 
-<h3 style="color:blue;">Certificate Verified ✅</h3>
-
 <div id="result">Checking certificate...</div>
 
 </div>
@@ -65,6 +63,7 @@ let cert = data.find(c => c.CertificateID === id);
 if(cert){
 
 document.getElementById("result").innerHTML = `
+<h3 style="color:blue;">Certificate Verified ✅</h3>
 <p><b>Certificate ID:</b> ${cert.CertificateID}</p>
 <p><b>Name:</b> ${cert.Name}</p>
 <p><b>Gender:</b> ${cert.Gender}</p>
