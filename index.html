@@ -95,14 +95,16 @@ if(cert){
 
 document.getElementById("result").innerHTML = `
 <h3 style="color:blue;">Certificate Verified ✅</h3>
-<p><b>Certificate ID:</b> ${cert.CertificateID}</p>
-<p><b>Name:</b> ${cert.Name}</p>
-<p><b>Gender:</b> ${cert.Gender}</p>
-<p><b>Date of Birth:</b> ${cert.DOB}</p>
-<p><b>Place of Birth:</b> ${cert.Place}</p>
-<p><b>Course:</b> ${cert.Course}</p>
-<p><b>Issue Date:</b> ${cert.Issue}</p>
-<p><b>Status:</b> ${cert.Status}</p>
+<table>
+<tr><td><b>Certificate ID:</b></td> <td>${cert.CertificateID}</p></td></tr>
+<td><b>Name:</b></td><td> ${cert.Name}</td>
+<td><b>Gender:</b></td><td> ${cert.Gender}</td>
+<td><b>Date of Birth:</b></td><td> ${cert.DOB}</td>
+<td><b>Place of Birth:</b></td><td> ${cert.Place}</td>
+<td><b>Course:</b></td><td> ${cert.Course}</td>
+<td><b>Issue Date:</b></td><td> ${cert.Issue}</td>
+<td><b>Status:</b></td><td> ${cert.Status}</td>
+</table>
 `;
 
 }else{
