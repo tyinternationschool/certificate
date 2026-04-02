@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Certificate Verification</title>
 
+<style>
+
+body{
+font-family:Arial;
+background:#f2f2f2;
+text-align:center;
+}
+
+.card{
+background:white;
+width:500px;
+margin:50px auto;
+padding:30px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.logo{
+width:90px;
+}
+
+.title{
+font-size:22px;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<img class="logo" src="YOUR_LOGO_LINK">
+
+<div class="title">Kok Pring High School</div>
+
+<h3>Certificate Verification</h3>
+
+<div id="result">Checking certificate...</div>
+
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+fetch("https://opensheet.elk.sh/1O4mVRuM6u5FdHtL4wuMQbUTRrwvFW6YjEFdlK82l-Xw/Certificates")
+.then(res => res.json())
+.then(data => {
+
+let cert = data.find(c => c.CertificateID === id);
+
+if(cert){
+
+document.getElementById("result").innerHTML = `
+<p><b>Certificate ID:</b> ${cert.CertificateID}</p>
+<p><b>Name:</b> ${cert.Name}</p>
+<p><b>Gender:</b> ${cert.Gender}</p>
+<p><b>Date of Birth:</b> ${cert.DOB}</p>
+<p><b>Place of Birth:</b> ${cert.Place}</p>
+<p><b>Course:</b> ${cert.Course}</p>
+<p><b>Issue Date:</b> ${cert.Issue}</p>
+<p><b>Status:</b> ${cert.Status}</p>
+`;
+
+}else{
+
+document.getElementById("result").innerHTML =
+"❌ Certificate Not Found";
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
