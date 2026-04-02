@@ -2,37 +2,67 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Certificate Verification</title>
 
 <style>
 
 body{
-font-family:Arial;
+font-family: Arial;
 background:#f2f2f2;
 text-align:center;
-font-size:13;
+font-size:14px;
+margin:0;
+padding:10px;
 }
 
 .card{
 background:white;
-width:500px;
+max-width:500px;
+width:100%;
 margin:30px auto;
-padding:30px;
+padding:25px;
 border-radius:10px;
 box-shadow:0 0 10px rgba(0,0,0,0.2);
+box-sizing:border-box;
 }
 
 .logo{
 width:140px;
+max-width:60%;
+height:auto;
+margin-bottom:10px;
 }
 
 .title{
 font-size:22px;
 font-weight:bold;
 color:green;
+margin-bottom:10px;
 }
 
 b{color:green;}
+
+#result p{
+margin:6px 0;
+}
+
+/* Mobile optimization */
+@media (max-width:600px){
+
+.card{
+padding:20px;
+}
+
+.title{
+font-size:18px;
+}
+
+.logo{
+width:110px;
+}
+
+}
 
 </style>
 
